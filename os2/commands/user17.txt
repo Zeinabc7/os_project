@@ -1,0 +1,37 @@
+Register
+Sleep 0.01
+
+Return book1
+Sleep 0.002
+
+Lend book1
+Sleep 0.002
+Lend book1
+Sleep 0.002
+Return book1
+Sleep 0.002
+
+Lend book2
+Sleep 0.002
+Return book2
+Sleep 0.002
+
+Lend book3
+Sleep 0.002
+Return book3
+Sleep 0.002
+
+Lend book1
+Sleep 0.002
+Return book1
+Sleep 0.002
+
+Lend book2
+Sleep 0.002
+Return book2
+Sleep 0.002
+
+Lend book3
+Sleep 0.002
+Return book3
+Sleep 0.002

@@ -1,0 +1,5 @@
+Register
+Register_book book1
+Register_book book2
+Register_book book3
+Sleep 0.05
