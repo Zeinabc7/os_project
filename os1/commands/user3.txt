@@ -1,0 +1,6 @@
+Register_book Clean_Code
+Sleep 0.1
+Register
+Lend Clean_Code
+Sleep 0.5
+Return Clean_Code

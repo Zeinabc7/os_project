@@ -1,0 +1,118 @@
+[2026-02-04 13:06:24] pid=17501 builder: starting builder (phase1)
+[2026-02-04 13:06:24] pid=17501 builder: spawned library pid=17502
+[2026-02-04 13:06:24] pid=17501 builder: ports user=5001 internal_users=6001 internal_books=6002
+[2026-02-04 13:06:24] pid=17502 library started. listen=127.0.0.1:5001 internal=127.0.0.1 users_port=6001 books_port=6002
+[2026-02-04 13:06:24] pid=17503 users_manager started on 127.0.0.1:6001
+[2026-02-04 13:06:24] pid=17504 books_manager started on 127.0.0.1:6002
+[2026-02-04 13:06:24] pid=17502 library: accepting clients...
+[2026-02-04 13:06:24] pid=17501 builder: spawned user1 pid=17506 cmd_file=commands/user1.txt
+[2026-02-04 13:06:24] pid=17501 builder: spawned user2 pid=17507 cmd_file=commands/user2.txt
+[2026-02-04 13:06:24] pid=17501 builder: spawned user3 pid=17508 cmd_file=commands/user3.txt
+[2026-02-04 13:06:24] pid=17501 builder: spawned user4 pid=17509 cmd_file=commands/user4.txt
+[2026-02-04 13:06:24] pid=17506 user 'user1' started with cmd_file=commands/user1.txt
+[2026-02-04 13:06:24] pid=17507 user 'user2' started with cmd_file=commands/user2.txt
+[2026-02-04 13:06:24] pid=17509 user 'user4' started with cmd_file=commands/user4.txt
+[2026-02-04 13:06:24] pid=17508 user 'user3' started with cmd_file=commands/user3.txt
+[2026-02-04 13:06:24] pid=17507 user 'user2': Sleep 0.2
+[2026-02-04 13:06:24] pid=17502 library: connection from 127.0.0.1:57291 -> waiting for semaphore
+[2026-02-04 13:06:24] pid=17502 library: semaphore acquired for 127.0.0.1:57291 -> forking handler
+[2026-02-04 13:06:24] pid=17502 library: connection from 127.0.0.1:57292 -> waiting for semaphore
+[2026-02-04 13:06:24] pid=17502 library: semaphore acquired for 127.0.0.1:57292 -> forking handler
+[2026-02-04 13:06:24] pid=17502 library: connection from 127.0.0.1:57293 -> waiting for semaphore
+[2026-02-04 13:06:24] pid=17502 library: semaphore acquired for 127.0.0.1:57293 -> forking handler
+[2026-02-04 13:06:24] pid=17510 handler: received from 127.0.0.1:57291: register_user user1
+[2026-02-04 13:06:24] pid=17511 handler: received from 127.0.0.1:57292: register_user user4
+[2026-02-04 13:06:24] pid=17512 handler: received from 127.0.0.1:57293: register_book Clean_Code
+[2026-02-04 13:06:25] pid=17502 library: connection from 127.0.0.1:57295 -> waiting for semaphore
+[2026-02-04 13:06:26] pid=17503 users_manager: registered user 'user1' as id=1
+[2026-02-04 13:06:26] pid=17506 user 'user1': register -> success 1
+[2026-02-04 13:06:26] pid=17504 books_manager: registered book 'Clean_Code'
+[2026-02-04 13:06:26] pid=17510 handler: replied to 127.0.0.1:57291: success 1
+[2026-02-04 13:06:26] pid=17503 users_manager: registered user 'user4' as id=2
+[2026-02-04 13:06:26] pid=17510 handler: done for 127.0.0.1:57291, releasing semaphore
+[2026-02-04 13:06:26] pid=17512 handler: replied to 127.0.0.1:57293: success
+[2026-02-04 13:06:26] pid=17511 handler: replied to 127.0.0.1:57292: success 2
+[2026-02-04 13:06:26] pid=17502 library: semaphore acquired for 127.0.0.1:57295 -> forking handler
+[2026-02-04 13:06:26] pid=17512 handler: done for 127.0.0.1:57293, releasing semaphore
+[2026-02-04 13:06:26] pid=17509 user 'user4': register -> success 2
+[2026-02-04 13:06:26] pid=17511 handler: done for 127.0.0.1:57292, releasing semaphore
+[2026-02-04 13:06:26] pid=17508 user 'user3': register_book 'Clean_Code' -> success
+[2026-02-04 13:06:26] pid=17508 user 'user3': Sleep 0.1
+[2026-02-04 13:06:26] pid=17502 library: connection from 127.0.0.1:57299 -> waiting for semaphore
+[2026-02-04 13:06:26] pid=17502 library: semaphore acquired for 127.0.0.1:57299 -> forking handler
+[2026-02-04 13:06:26] pid=17523 handler: received from 127.0.0.1:57295: register_user user2
+[2026-02-04 13:06:26] pid=17502 library: connection from 127.0.0.1:57300 -> waiting for semaphore
+[2026-02-04 13:06:26] pid=17502 library: semaphore acquired for 127.0.0.1:57300 -> forking handler
+[2026-02-04 13:06:26] pid=17524 handler: received from 127.0.0.1:57299: register_book Harry_Potter
+[2026-02-04 13:06:26] pid=17525 handler: received from 127.0.0.1:57300: lend_book 2 Harry_Potter
+[2026-02-04 13:06:26] pid=17502 library: connection from 127.0.0.1:57301 -> waiting for semaphore
+[2026-02-04 13:06:27] pid=17503 users_manager: registered user 'user2' as id=3
+[2026-02-04 13:06:27] pid=17523 handler: replied to 127.0.0.1:57295: success 3
+[2026-02-04 13:06:27] pid=17507 user 'user2': register -> success 3
+[2026-02-04 13:06:27] pid=17504 books_manager: registered book 'Harry_Potter'
+[2026-02-04 13:06:27] pid=17523 handler: done for 127.0.0.1:57295, releasing semaphore
+[2026-02-04 13:06:27] pid=17506 user 'user1': register_book 'Harry_Potter' -> success
+[2026-02-04 13:06:27] pid=17502 library: semaphore acquired for 127.0.0.1:57301 -> forking handler
+[2026-02-04 13:06:27] pid=17524 handler: replied to 127.0.0.1:57299: success
+[2026-02-04 13:06:27] pid=17524 handler: done for 127.0.0.1:57299, releasing semaphore
+[2026-02-04 13:06:28] pid=17504 books_manager: lent 'Harry_Potter' to user_id=2
+[2026-02-04 13:06:28] pid=17502 library: connection from 127.0.0.1:57305 -> waiting for semaphore
+[2026-02-04 13:06:28] pid=17509 user 'user4': lend 'Harry_Potter' -> success
+[2026-02-04 13:06:28] pid=17502 library: semaphore acquired for 127.0.0.1:57305 -> forking handler
+[2026-02-04 13:06:28] pid=17525 handler: replied to 127.0.0.1:57300: success
+[2026-02-04 13:06:28] pid=17525 handler: done for 127.0.0.1:57300, releasing semaphore
+[2026-02-04 13:06:28] pid=17537 handler: received from 127.0.0.1:57301: register_user user3
+[2026-02-04 13:06:28] pid=17502 library: connection from 127.0.0.1:57308 -> waiting for semaphore
+[2026-02-04 13:06:28] pid=17502 library: semaphore acquired for 127.0.0.1:57308 -> forking handler
+[2026-02-04 13:06:28] pid=17538 handler: received from 127.0.0.1:57305: lend_book 3 Harry_Potter
+[2026-02-04 13:06:28] pid=17502 library: connection from 127.0.0.1:57310 -> waiting for semaphore
+[2026-02-04 13:06:28] pid=17539 handler: received from 127.0.0.1:57308: lend_book 1 Harry_Potter
+[2026-02-04 13:06:29] pid=17503 users_manager: registered user 'user3' as id=4
+[2026-02-04 13:06:29] pid=17508 user 'user3': register -> success 4
+[2026-02-04 13:06:29] pid=17537 handler: replied to 127.0.0.1:57301: success 4
+[2026-02-04 13:06:29] pid=17507 user 'user2': lend 'Harry_Potter' -> failure
+[2026-02-04 13:06:29] pid=17538 handler: lend failure (reason=book already lent) user_id=3 title='Harry_Potter' holder_user_id=2
+[2026-02-04 13:06:29] pid=17507 user 'user2': Sleep 1.0
+[2026-02-04 13:06:29] pid=17506 user 'user1': lend 'Harry_Potter' -> failure
+[2026-02-04 13:06:29] pid=17539 handler: lend failure (reason=book already lent) user_id=1 title='Harry_Potter' holder_user_id=2
+[2026-02-04 13:06:29] pid=17537 handler: done for 127.0.0.1:57301, releasing semaphore
+[2026-02-04 13:06:29] pid=17506 user 'user1': Sleep 2.0
+[2026-02-04 13:06:29] pid=17538 handler: done for 127.0.0.1:57305, releasing semaphore
+[2026-02-04 13:06:29] pid=17502 library: semaphore acquired for 127.0.0.1:57310 -> forking handler
+[2026-02-04 13:06:29] pid=17539 handler: done for 127.0.0.1:57308, releasing semaphore
+[2026-02-04 13:06:29] pid=17502 library: connection from 127.0.0.1:57320 -> waiting for semaphore
+[2026-02-04 13:06:29] pid=17502 library: semaphore acquired for 127.0.0.1:57320 -> forking handler
+[2026-02-04 13:06:29] pid=17541 handler: received from 127.0.0.1:57310: return_book 2 Harry_Potter
+[2026-02-04 13:06:29] pid=17542 handler: received from 127.0.0.1:57320: lend_book 4 Clean_Code
+[2026-02-04 13:06:30] pid=17502 library: connection from 127.0.0.1:57322 -> waiting for semaphore
+[2026-02-04 13:06:30] pid=17502 library: semaphore acquired for 127.0.0.1:57322 -> forking handler
+[2026-02-04 13:06:30] pid=17554 handler: received from 127.0.0.1:57322: return_book 3 Harry_Potter
+[2026-02-04 13:06:31] pid=17504 books_manager: returned 'Harry_Potter' from user_id=2
+[2026-02-04 13:06:31] pid=17509 user 'user4': return 'Harry_Potter' -> success
+[2026-02-04 13:06:31] pid=17509 user 'user4' finished.
+[2026-02-04 13:06:31] pid=17504 books_manager: lent 'Clean_Code' to user_id=4
+[2026-02-04 13:06:31] pid=17541 handler: replied to 127.0.0.1:57310: success
+[2026-02-04 13:06:31] pid=17508 user 'user3': lend 'Clean_Code' -> success
+[2026-02-04 13:06:31] pid=17508 user 'user3': Sleep 0.5
+[2026-02-04 13:06:31] pid=17542 handler: replied to 127.0.0.1:57320: success
+[2026-02-04 13:06:31] pid=17541 handler: done for 127.0.0.1:57310, releasing semaphore
+[2026-02-04 13:06:31] pid=17542 handler: done for 127.0.0.1:57320, releasing semaphore
+[2026-02-04 13:06:31] pid=17502 library: connection from 127.0.0.1:57330 -> waiting for semaphore
+[2026-02-04 13:06:31] pid=17502 library: semaphore acquired for 127.0.0.1:57330 -> forking handler
+[2026-02-04 13:06:31] pid=17555 handler: received from 127.0.0.1:57330: return_book 1 Harry_Potter
+[2026-02-04 13:06:31] pid=17502 library: connection from 127.0.0.1:57331 -> waiting for semaphore
+[2026-02-04 13:06:31] pid=17502 library: semaphore acquired for 127.0.0.1:57331 -> forking handler
+[2026-02-04 13:06:31] pid=17556 handler: received from 127.0.0.1:57331: return_book 4 Clean_Code
+[2026-02-04 13:06:32] pid=17507 user 'user2': return 'Harry_Potter' -> failure
+[2026-02-04 13:06:32] pid=17507 user 'user2' finished.
+[2026-02-04 13:06:32] pid=17554 handler: return failure (reason=book is not lent to anyone) user_id=3 title='Harry_Potter'
+[2026-02-04 13:06:32] pid=17554 handler: done for 127.0.0.1:57322, releasing semaphore
+[2026-02-04 13:06:33] pid=17506 user 'user1': return 'Harry_Potter' -> failure
+[2026-02-04 13:06:33] pid=17555 handler: return failure (reason=book is not lent to anyone) user_id=1 title='Harry_Potter'
+[2026-02-04 13:06:33] pid=17506 user 'user1' finished.
+[2026-02-04 13:06:33] pid=17555 handler: done for 127.0.0.1:57330, releasing semaphore
+[2026-02-04 13:06:33] pid=17504 books_manager: returned 'Clean_Code' from user_id=4
+[2026-02-04 13:06:33] pid=17508 user 'user3': return 'Clean_Code' -> success
+[2026-02-04 13:06:33] pid=17508 user 'user3' finished.
+[2026-02-04 13:06:33] pid=17556 handler: replied to 127.0.0.1:57331: success
+[2026-02-04 13:06:33] pid=17556 handler: done for 127.0.0.1:57331, releasing semaphore
